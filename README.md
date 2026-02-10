@@ -9,9 +9,8 @@ This is an n8n community node that allows you to send SMS messages using the [In
 | Country | Status |
 |---------|--------|
 | Colombia | Available |
-| Mexico | Coming soon |
 
-> **Note:** Inalambria Express currently operates in Colombia. Support for Mexico is planned for the future.
+> **Note:** Inalambria Express currently operates in Colombia.
 
 ## Installation
 
