@@ -1,0 +1,59 @@
+{
+  "name": "n8n-nodes-inalambria-express",
+  "version": "0.1.0",
+  "description": "n8n community node for sending SMS via Inalambria Express API",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "sms",
+    "inalambria",
+    "messaging"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/GH-Jaider/n8n-nodes-inalambria-express",
+  "author": {
+    "name": "Jaider",
+    "email": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GH-Jaider/n8n-nodes-inalambria-express.git"
+  },
+  "engines": {
+    "node": ">=22.0"
+  },
+  "packageManager": "pnpm@9.0.0",
+  "main": "dist/nodes/InalambriaExpress/InalambriaExpress.node.js",
+  "scripts": {
+    "dev": "n8n-node dev",
+    "build": "n8n-node build",
+    "build:watch": "n8n-node build --watch",
+    "lint": "n8n-node lint",
+    "lint:fix": "n8n-node lint --fix",
+    "release": "n8n-node release",
+    "format": "prettier --write .",
+    "prepublishOnly": "pnpm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/InalambriaExpressApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/InalambriaExpress/InalambriaExpress.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@n8n/node-cli": "^0.19.0",
+    "@types/node": "^22.10.0",
+    "n8n-workflow": "^1.72.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.7.0"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  }
+}
