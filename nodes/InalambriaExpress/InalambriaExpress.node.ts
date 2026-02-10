@@ -476,6 +476,7 @@ export class InalambriaExpress implements INodeType {
     const returnData: INodeExecutionData[] = [];
     const resource = this.getNodeParameter('resource', 0) as string;
     const operation = this.getNodeParameter('operation', 0) as string;
+    const baseURL = 'https://api.inalambria.express/v1';
 
     for (let i = 0; i < items.length; i++) {
       try {
@@ -514,6 +515,7 @@ export class InalambriaExpress implements INodeType {
               'inalambriaExpressApi',
               {
                 method: 'POST' as IHttpRequestMethods,
+                baseURL,
                 url: '/messages/send',
                 body,
                 json: true,
@@ -553,6 +555,7 @@ export class InalambriaExpress implements INodeType {
               'inalambriaExpressApi',
               {
                 method: 'POST' as IHttpRequestMethods,
+                baseURL,
                 url: '/messages/send/batch',
                 body,
                 json: true,
@@ -593,6 +596,7 @@ export class InalambriaExpress implements INodeType {
               'inalambriaExpressApi',
               {
                 method: 'POST' as IHttpRequestMethods,
+                baseURL,
                 url: '/messages/send/template',
                 body,
                 json: true,
@@ -630,6 +634,7 @@ export class InalambriaExpress implements INodeType {
                   'inalambriaExpressApi',
                   {
                     method: 'GET' as IHttpRequestMethods,
+                    baseURL,
                     url: '/messages/history',
                     qs: { ...qs, limit, offset },
                     json: true,
@@ -652,6 +657,7 @@ export class InalambriaExpress implements INodeType {
                 'inalambriaExpressApi',
                 {
                   method: 'GET' as IHttpRequestMethods,
+                  baseURL,
                   url: '/messages/history',
                   qs,
                   json: true,
@@ -669,6 +675,7 @@ export class InalambriaExpress implements INodeType {
               'inalambriaExpressApi',
               {
                 method: 'GET' as IHttpRequestMethods,
+                baseURL,
                 url: '/messages/balance',
                 json: true,
               },
@@ -687,6 +694,7 @@ export class InalambriaExpress implements INodeType {
               'inalambriaExpressApi',
               {
                 method: 'GET' as IHttpRequestMethods,
+                baseURL,
                 url: `/messages/job/${jobId}`,
                 json: true,
               },
@@ -700,6 +708,7 @@ export class InalambriaExpress implements INodeType {
               'inalambriaExpressApi',
               {
                 method: 'GET' as IHttpRequestMethods,
+                baseURL,
                 url: '/messages/jobs/pending',
                 json: true,
               },
