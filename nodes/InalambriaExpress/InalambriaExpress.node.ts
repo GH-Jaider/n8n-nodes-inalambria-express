@@ -20,8 +20,8 @@ export class InalambriaExpress implements INodeType {
     defaults: {
       name: 'Inalambria Express',
     },
-    inputs: ['main'],
-    outputs: ['main'],
+    inputs: ['main'] as const,
+    outputs: ['main'] as const,
     credentials: [
       {
         name: 'inalambriaExpressApi',
